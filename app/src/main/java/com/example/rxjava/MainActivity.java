@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.example.rxjava.conversion.Change;
+import com.example.rxjava.filter.ObservableFilter;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
@@ -17,7 +18,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textView,change;
+    private Button textView, change, filter;
     int count = 0;
 
     @Override
@@ -26,13 +27,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text);
         change = findViewById(R.id.change);
+        filter = findViewById(R.id.filter);
         textView.setOnClickListener(this::create);
         change.setOnClickListener(this::change);
+        filter.setOnClickListener(v -> {
+            ObservableFilter.filter();
+        });
     }
+
 
     private void change(View view) {
 //        Change.map();
-        Change.flatMap();
+//        Change.flatMap();
+//        Change.buffer();
+//        Change.window();
+        Change.groupBy();
     }
 
     private void create(View view) {

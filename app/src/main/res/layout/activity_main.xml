@@ -22,4 +22,12 @@
         android:text="change"
         app:layout_constraintTop_toBottomOf="@id/text" />
 
+    <Button
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="filter"
+        app:layout_constraintTop_toBottomOf="@id/change" />
+
 </android.support.constraint.ConstraintLayout>
