@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         textView.setOnClickListener(this::create);
         change.setOnClickListener(this::change);
         filter.setOnClickListener(v -> {
-            ObservableFilter.filter();
+//            ObservableFilter.filter();
+            ObservableFilter.distince();
         });
     }
 
