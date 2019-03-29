@@ -12,6 +12,9 @@ import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * 过滤操作符
+ */
 public class ObservableFilter {
 
     public static void filter() {

@@ -1,12 +1,12 @@
 package com.example.rxjava;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.blankj.utilcode.util.LogUtils;
+import com.example.rxjava.combination.ObservableCombination;
 import com.example.rxjava.conversion.Change;
 import com.example.rxjava.filter.ObservableFilter;
 
@@ -18,7 +18,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textView, change, filter;
+    private Button textView, change, filter, combination;
     int count = 0;
 
     @Override
@@ -28,12 +28,20 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.text);
         change = findViewById(R.id.change);
         filter = findViewById(R.id.filter);
+        combination = findViewById(R.id.combination);
         textView.setOnClickListener(this::create);
         change.setOnClickListener(this::change);
         filter.setOnClickListener(v -> {
 //            ObservableFilter.filter();
 //            ObservableFilter.distince();
             ObservableFilter.debounce();
+        });
+        combination.setOnClickListener(v -> {
+//            ObservableCombination.zip();
+//            ObservableCombination.concat();
+//            ObservableCombination.merge();
+//            ObservableCombination.combineLatest();
+            ObservableCombination.startWitch();
         });
     }
 
