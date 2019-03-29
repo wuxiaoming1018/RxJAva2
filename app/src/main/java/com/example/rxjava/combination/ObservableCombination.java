@@ -12,7 +12,7 @@ import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Consumer;
 
 /**
- * 组合操作法
+ * 组合操作符
  */
 public class ObservableCombination {
 
