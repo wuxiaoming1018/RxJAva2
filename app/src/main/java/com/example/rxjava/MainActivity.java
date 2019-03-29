@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         change.setOnClickListener(this::change);
         filter.setOnClickListener(v -> {
 //            ObservableFilter.filter();
-            ObservableFilter.distince();
+//            ObservableFilter.distince();
+            ObservableFilter.debounce();
         });
     }
 

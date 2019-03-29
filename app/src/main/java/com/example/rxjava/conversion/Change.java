@@ -1,8 +1,6 @@
 package com.example.rxjava.conversion;
 
 
-import android.util.Log;
-
 import com.blankj.utilcode.util.LogUtils;
 
 import java.util.ArrayList;
