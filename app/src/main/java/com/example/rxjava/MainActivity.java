@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         retry.setOnClickListener(v -> {
-            ObservableError.retry();
+//            ObservableError.retry();
+            ObservableError.retryWhen();
         });
     }
 
