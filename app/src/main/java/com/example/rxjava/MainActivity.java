@@ -10,6 +10,7 @@ import com.example.rxjava.combination.ObservableCombination;
 import com.example.rxjava.conversion.Change;
 import com.example.rxjava.error.ObservableError;
 import com.example.rxjava.filter.ObservableFilter;
+import com.example.rxjava.help.ObservableHelper;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
@@ -19,7 +20,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button textView, change, filter, combination, retry;
+    private Button textView, change, filter, combination, retry, helper;
     int count = 0;
 
     @Override
@@ -33,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         retry = findViewById(R.id.retry);
         textView.setOnClickListener(this::create);
         change.setOnClickListener(this::change);
+        helper = findViewById(R.id.helper);
+        helper.setOnClickListener(v -> {
+            ObservableHelper.doNext();
+        });
         filter.setOnClickListener(v -> {
 //            ObservableFilter.filter();
 //            ObservableFilter.distince();
